@@ -5,10 +5,4 @@ Parse.Cloud.define("hello", function(request, response) {
   response.success("Hello world!");
 });
 
-[PFCloud callFunctionInBackground:@"hello"
-                   withParameters:@{}
-                            block:^(NSString *result, NSError *error) {
-   if (!error) {
-     // result is @"Hello world!"
-   }
-}];
+$ parse deploy
